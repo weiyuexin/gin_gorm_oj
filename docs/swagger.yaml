@@ -1,0 +1,32 @@
+info:
+  contact: {}
+paths:
+  /problem-list:
+    get:
+      consumes:
+      - application/json
+      description: 获取题目列表
+      parameters:
+      - description: page
+        in: query
+        name: page
+        type: integer
+      - description: size
+        in: query
+        name: size
+        type: integer
+      - description: keyword
+        in: query
+        name: keyword
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"msg":"","data":""}'
+          schema:
+            type: string
+      summary: 获取题目列表
+      tags:
+      - Problem
+swagger: "2.0"
