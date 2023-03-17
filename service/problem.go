@@ -32,7 +32,7 @@ func GetProblemList(c *gin.Context) {
 	var count int64
 	keyword := c.Query("keyword")
 
-	list := make([]*models.Problem, 0)
+	list := make([]*models.ProblemBasic, 0)
 	//获取keyword查询到的数据
 	tx := models.GetProblemList(keyword)
 	//分页
